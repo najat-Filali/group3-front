@@ -24,13 +24,5 @@ jobs:
             rm -rf $CLONE_DIR
             git clone -b develop git@github.com:$REPO_URL.git $CLONE_DIR
             cd $CLONE_DIR
-            npm install
-            npm run build
-            cp .env.sample ./dist/.env
-            cp index.html ./dist/index.html
-            cd dist
-            sed -i 's/xenv/prod/g' .env
-            sed -i 's/xport/${{ secrets.EXPRESS_PORT }}/g' .env
-            npm install --production
-            pm2 stop app-grp3 > /dev/null 2>&1
-            pm2 start index.html --name=app-grp3
+            ls -la
+            

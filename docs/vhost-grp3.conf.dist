@@ -1,0 +1,11 @@
+server {
+    listen 80;
+    server_name grp3-front.360medics.com;
+    
+    root /home/john/front-grp3;
+    index index.html;
+    
+    location / {
+        try_files $uri $uri/ /index.html =404;
+    }
+}
