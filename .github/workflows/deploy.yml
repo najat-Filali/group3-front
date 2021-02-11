@@ -12,13 +12,13 @@ jobs:
         env:
           CLONE_DIR: "/home/john/front-grp3"
           REPO_URL: ${{ github.repository }}
-          EXPRESS_PORT: ${{ secrets.EXPRESS_PORT }}
+          #EXPRESS_PORT: ${{ secrets.EXPRESS_PORT }}
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USERNAME }}
           port: ${{ secrets.SSH_PORT }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          envs: CLONE_DIR,REPO_URL,EXPRESS_PORT
+          envs: CLONE_DIR,REPO_URL
           script: |
             echo "Hello world"
             rm -rf $CLONE_DIR
