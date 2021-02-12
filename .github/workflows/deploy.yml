@@ -9,6 +9,9 @@ jobs:
     steps:
       - name: Executing remote ssh 2 commands using password
         uses: appleboy/ssh-action@master
+        env:
+          CLONE_DIR: "/home/john/node-grp3"
+          REPO_URL: ${{ github.repository }}
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USERNAME }}
@@ -18,3 +21,12 @@ jobs:
             echo "Hello world $CLONE_DIR"
             rm -rf /home/john/front-grp3
             git clone -b develop git@github.com:najat-Filali/group3-front.git /home/john/front-grp3
+
+
+
+
+
+
+
+
+
