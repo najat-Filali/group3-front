@@ -21,15 +21,11 @@ jobs:
             echo "Hello world $CLONE_DIR"
             rm -rf /home/john/front-grp3
             git clone -b develop git@github.com:najat-Filali/group3-front.git /home/john/front-grp3
-            npm install
-            npm run build
-            cp .env.dist ./dist/.env
-            cd dist && npm install
-            sed -i 's/xenv/prod/g' .env  
-            sed -i 's/xdbhost/${{ secrets.PROD_DB_HOST }}/g' .env
-            sed -i 's/xdbuser/${{ secrets.PROD_DB_USER }}/g' .env
-            sed -i 's/xdbpwd/${{ secrets.PROD_DB_PWD }}/g' .env
-            sed -i 's/xdbname/${{ secrets.PROD_DB_DATABASE }}/g' .env
+
+
+
+
+
 
 
 
