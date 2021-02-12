@@ -31,7 +31,7 @@ jobs:
             sed -i 's/xdbpwd/${{ secrets.PROD_DB_PWD }}/g' .env
             sed -i 's/xdbname/${{ secrets.PROD_DB_DATABASE }}/g' .env
             pm2 stop app-grp3 > /dev/null 2>&1
-            pm2 start index.js --name app-grp3
+            pm2 start index.html --name app-grp3
 
 
 
